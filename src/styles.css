@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.slideShow {
+  max-width: 500px;
+  position: relative;
+  margin: 30px auto;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slide {
+  position: relative;
+  display: none;
+}
+.slide img {
+  max-width: 100%;
+}
+.slide span {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  color: white;
+  transform: translateX(-50%);
+}
+.slide.active {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.dot_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: grey;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: blue;
+}
+
+.navigation {
+  color: brown;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-100%);
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
